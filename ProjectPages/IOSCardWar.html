@@ -1,0 +1,151 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>iOS Card War | Julius Holbert</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<meta name="description" content="iOS Card War - A native iOS card game app built with Swift and SwiftUI." />
+		<link rel="stylesheet" href="../assets/css/main.css" />
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+
+							<!-- Header -->
+								<header id="header">
+									<a href="../index.html" class="logo"><strong>iOS Card War</strong> <img class="signaturelogo" src="../images/Logo.png" alt="Julius Holbert Logo"/> </a>
+									<ul class="icons">
+										<li><a href="https://www.linkedin.com/in/julius-holbert/" target="_blank" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
+										<li><a href="https://github.com/JuliusHolbert" target="_blank" class="icon brands fa-github"><span class="label">Github</span></a></li>
+									</ul>
+								</header>
+
+							<!-- Content -->
+								<section>
+									<header class="main">
+										<h1>iOS CardWar App</h1>
+									</header>
+
+									<div style="margin-bottom: 40px;">
+										<img
+											src="../images/IOSCardWar.png"
+											class="project-image"
+											style="max-width: 100%; height: auto; border-radius: 16px;"
+											alt="iOS Card War Game"
+											loading="lazy"
+										/>
+									</div>
+
+									<p>This is a very simple iOS app that is based off the traditional card game, War. In the traditional game, players try to win all the cards by dealing a deck evenly between two players, then simultaneously flipping their top card to see who has the higher value. The player with the higher card takes both cards and places them at the bottom of their deck. If the cards are the same rank, it's a "war," and players lay down a few more cards (typically three face down, one face up) to determine the winner of the larger pot. This is a simplified version of the original, and players click a deal button to be randomly assign a card to themselves, and a CPU player. Whichever player's card has a higher value is assigned a point, and if it is a draw, neither player is assigned a point.</p>
+
+									<hr class="major" />
+
+									<h2>Technology Utilized</h2>
+									<div class="tech-tags" style="padding: 0; margin-bottom: 2em;">
+										<span class="tech-tag">Swift 5.0</span>
+										<span class="tech-tag">SwiftUI</span>
+										<span class="tech-tag">Xcode 15</span>
+										<span class="tech-tag">iOS 17.5+</span>
+										<span class="tech-tag">MVVM</span>
+									</div>
+									<p>This War card game application is a native iOS app built using Swift 5.0 and SwiftUI, Apple's modern declarative UI framework. Developed in Xcode 15.4, the app targets iOS 17.5+ and supports both iPhone and iPad devices in portrait and landscape orientations. The application follows SwiftUI's modern app lifecycle using the @main attribute and implements reactive state management through @State property wrappers, adhering to an MVVM architectural pattern. All visual assets, including playing card images, backgrounds, logos, and buttons, are managed through Xcode's asset catalog system. The app is entirely self-contained with no external dependencies, third-party frameworks, or networking services, relying solely on Swift's Foundation framework for core functionality like random number generation. Build configuration includes automatic code signing and Swift asset symbol generation, with SwiftUI preview support enabled for streamlined development.</p>
+
+									<hr class="major" />
+
+									<h2>Build Context</h2>
+									<p>This is the first iOS app I built in order to learn about Xcode, Swift, and SwiftUI. It was a very simple app just to introduce me to Apple's development suite and I learned the basics of the language and architecture of an iOS application.</p>
+
+									<hr class="major" />
+
+									<h2>Changes and Improvements</h2>
+									<p>I have not made any changes to this app as this was just for me to learn the skills to develop more complex and challenging applications.</p>
+								</section>
+
+						</div>
+					</div>
+
+				<!-- Sidebar -->
+					<div id="sidebar" class="inactive">
+						<div class="inner">
+
+							<!-- Menu -->
+								<nav id="menu">
+									<header class="major">
+										<h2>Menu</h2>
+									</header>
+									<ul>
+										<li><a href="../index.html">Homepage</a></li>
+										<li><a href="../about.html">About</a></li>
+										<li>
+											<span class="opener">Projects</span>
+											<ul>
+												<li><a href="Marco.html">Marco</a></li>
+												<li><a href="FacebookClone.html">Facebook Clone</a></li>
+												<li><a href="ChatGPT.html">ChatGPT Clone</a></li>
+												<li><a href="TravelMap.html">Travel Map</a></li>
+												<li><a href="IOSCardWar.html">iOS Card War</a></li>
+												<li><a href="BusTracker.html">Bus Tracker</a></li>
+											</ul>
+										</li>
+									</ul>
+								</nav>
+
+							<!-- Contact Info -->
+								<section>
+									<header class="major">
+										<h2>Contact</h2>
+									</header>
+									<p>The best way to get in touch with me is to send me an email. Please include the reason you're reaching out in the subject line.</p>
+									<ul class="contact">
+										<li class="icon solid fa-envelope"><a href="mailto:juliusholbert@gmail.com">juliusholbert@gmail.com</a></li>
+										<li class="icon solid fa-home">Largo, FL</li>
+									</ul>
+								</section>
+
+							<!-- Footer -->
+								<footer id="footer">
+									<p class="copyright">Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
+								</footer>
+
+						</div>
+					</div>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="../assets/js/jquery.min.js"></script>
+			<script src="../assets/js/browser.min.js"></script>
+			<script src="../assets/js/breakpoints.min.js"></script>
+			<script src="../assets/js/util.js"></script>
+			<script src="../assets/js/main.js"></script>
+			<script>
+				// Sidebar and menu state management
+				$(document).ready(function() {
+					if (sessionStorage.getItem('sidebarOpen') === 'true') {
+						$('#sidebar').removeClass('inactive');
+					}
+					if (sessionStorage.getItem('projectsMenuOpen') === 'true') {
+						$('#menu .opener').addClass('active');
+					}
+					$('#sidebar .toggle').on('click', function() {
+						setTimeout(function() {
+							var isOpen = !$('#sidebar').hasClass('inactive');
+							sessionStorage.setItem('sidebarOpen', isOpen);
+						}, 10);
+					});
+					$('#menu .opener').on('click', function() {
+						setTimeout(function() {
+							var isOpen = $('#menu .opener').hasClass('active');
+							sessionStorage.setItem('projectsMenuOpen', isOpen);
+						}, 10);
+					});
+				});
+			</script>
+
+	</body>
+</html>

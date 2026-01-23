@@ -1,0 +1,159 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Travel Map | Julius Holbert</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<meta name="description" content="Travel Map - An interactive social map application built with React, Mapbox, and MongoDB." />
+		<link rel="stylesheet" href="../assets/css/main.css" />
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+
+							<!-- Header -->
+								<header id="header">
+									<a href="../index.html" class="logo"><strong>Travel Map</strong> <img class="signaturelogo" src="../images/Logo.png" alt="Julius Holbert Logo"/> </a>
+									<ul class="icons">
+										<li><a href="https://www.linkedin.com/in/julius-holbert/" target="_blank" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
+										<li><a href="https://github.com/JuliusHolbert" target="_blank" class="icon brands fa-github"><span class="label">Github</span></a></li>
+									</ul>
+								</header>
+
+							<!-- Content -->
+								<section>
+									<header class="main">
+										<h1>Travel Map <a href="https://frontend-production-b746.up.railway.app/" target="_blank" class="icon solid fa-external-link-alt" style="font-size: 0.4em; margin-left: 0.3em; vertical-align: middle;"></a></h1>
+									</header>
+
+									<div class="project-iframe-container">
+										<iframe
+											src="https://frontend-production-b746.up.railway.app/"
+											title="Travel Map"
+											allowfullscreen
+											loading="lazy">
+										</iframe>
+										<div class="mobile-view-notice">
+											<p><strong>Mobile View</strong></p>
+											<p>This interactive project is best viewed on a desktop device.</p>
+											<a href="https://frontend-production-b746.up.railway.app/" target="_blank" class="button primary">View Full Project</a>
+										</div>
+									</div>
+
+									<p>This is a full-stack social travel mapping application built with React and Express that enables users to collaboratively share and discover travel experiences through an interactive Mapbox-powered map interface. Users can create accounts, authenticate, and drop pins at any location by double-clicking (desktop) or long-pressing (mobile) on the map, where they can add a custom title, written review, and 1-5 star rating for that place. The application provides a social layer by displaying all users' pins simultaneously on the map - a user's own pins appear in tomato red while other travelers' pins show in slate blue, creating a visual distinction between personal and community content. When clicking any pin, users can view the full review details including the place name, rating displayed as gold stars, review text, creator username, and timestamp. Users can delete their own pins, switch between six different map styles (Streets, Outdoors, Satellite, etc.), and the application features mobile-responsive design with touch-optimized interactions and an animated intro sequence, all backed by MongoDB for data persistence and supporting real-time updates as new pins are added by the community.</p>
+
+									<hr class="major" />
+
+									<h2>Technology Utilized</h2>
+									<div class="tech-tags" style="padding: 0; margin-bottom: 2em;">
+										<span class="tech-tag">React 18</span>
+										<span class="tech-tag">Mapbox GL</span>
+										<span class="tech-tag">react-map-gl</span>
+										<span class="tech-tag">Node.js</span>
+										<span class="tech-tag">Express</span>
+										<span class="tech-tag">MongoDB</span>
+										<span class="tech-tag">Mongoose</span>
+										<span class="tech-tag">Material-UI</span>
+										<span class="tech-tag">bcrypt</span>
+									</div>
+									<p>This Travel Map application is built using a modern full-stack JavaScript architecture deployed as separate services in the cloud on Railway, with the frontend and backend as independent Railway services that interact with each other. The frontend leverages React 18 with react-map-gl and Mapbox GL for interactive mapping capabilities, allowing users to visualize and interact with location pins on various map styles (streets, satellite, outdoors, etc.). The UI is enhanced with Material-UI (MUI) components and icons for a polished user experience, and axios handles HTTP requests to the backend API. On the backend, the application runs on Node.js with Express.js serving as the web framework, which handles RESTful API routes for user authentication and pin management. MongoDB serves as the NoSQL database with Mongoose as the ODM (Object-Document Mapper) for schema modeling and database operations. Security is implemented through bcrypt for password hashing, and CORS middleware enables secure cross-origin resource sharing between the frontend and backend services. The application uses dotenv for environment configuration management on both ends, and webpack bundles the frontend assets via Create React App's build system.</p>
+
+									<hr class="major" />
+
+									<h2>Build Context</h2>
+									<p>This app was built as an improvement and continuation of the skills I learned from my bus tracking app, and as you can tell at this point, I have a love for mapping applications! I really liked the complexity of learning about mapboxes API in greater detail, such as storing location data, adding annotations to the map, and managing map-state data. It's not the first application I built with authentication, but it is one of the first I built where the authentication data influences aspects of the styling and information displayed. Also in refactoring the application, along with making it mobile responsive, I also ventured into animation by adding an intro opening sequence which was something I haven't experimented with up until this point.</p>
+
+									<hr class="major" />
+
+									<h2>Changes and Improvements</h2>
+									<p>I have made a number of improvements in refactoring this application. I made the application fully responsive and fixed issues with window size, and layout. With making the application mobile responsive, I had to add a long press feature, as double tap wasn't mobile optimized. Following this, I built functionality to cancel if the user moves their finger more than 10 pixels to prevent accidental long presses while moving the map. I also added a selector so users can change what style of mapbox map is being dispayed, and this allows a more nuanced approach to information as some map styles have different information, such as contour lines on the "outdoor" style. Finally, I created an animated opening sequence to experiment with animation.</p>
+								</section>
+
+						</div>
+					</div>
+
+				<!-- Sidebar -->
+					<div id="sidebar" class="inactive">
+						<div class="inner">
+
+							<!-- Menu -->
+								<nav id="menu">
+									<header class="major">
+										<h2>Menu</h2>
+									</header>
+									<ul>
+										<li><a href="../index.html">Homepage</a></li>
+										<li><a href="../about.html">About</a></li>
+										<li>
+											<span class="opener">Projects</span>
+											<ul>
+												<li><a href="Marco.html">Marco</a></li>
+												<li><a href="FacebookClone.html">Facebook Clone</a></li>
+												<li><a href="ChatGPT.html">ChatGPT Clone</a></li>
+												<li><a href="TravelMap.html">Travel Map</a></li>
+												<li><a href="IOSCardWar.html">iOS Card War</a></li>
+												<li><a href="BusTracker.html">Bus Tracker</a></li>
+											</ul>
+										</li>
+									</ul>
+								</nav>
+
+							<!-- Contact Info -->
+								<section>
+									<header class="major">
+										<h2>Contact</h2>
+									</header>
+									<p>The best way to get in touch with me is to send me an email. Please include the reason you're reaching out in the subject line.</p>
+									<ul class="contact">
+										<li class="icon solid fa-envelope"><a href="mailto:juliusholbert@gmail.com">juliusholbert@gmail.com</a></li>
+										<li class="icon solid fa-home">Largo, FL</li>
+									</ul>
+								</section>
+
+							<!-- Footer -->
+								<footer id="footer">
+									<p class="copyright">Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
+								</footer>
+
+						</div>
+					</div>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="../assets/js/jquery.min.js"></script>
+			<script src="../assets/js/browser.min.js"></script>
+			<script src="../assets/js/breakpoints.min.js"></script>
+			<script src="../assets/js/util.js"></script>
+			<script src="../assets/js/main.js"></script>
+			<script>
+				// Sidebar and menu state management
+				$(document).ready(function() {
+					if (sessionStorage.getItem('sidebarOpen') === 'true') {
+						$('#sidebar').removeClass('inactive');
+					}
+					if (sessionStorage.getItem('projectsMenuOpen') === 'true') {
+						$('#menu .opener').addClass('active');
+					}
+					$('#sidebar .toggle').on('click', function() {
+						setTimeout(function() {
+							var isOpen = !$('#sidebar').hasClass('inactive');
+							sessionStorage.setItem('sidebarOpen', isOpen);
+						}, 10);
+					});
+					$('#menu .opener').on('click', function() {
+						setTimeout(function() {
+							var isOpen = $('#menu .opener').hasClass('active');
+							sessionStorage.setItem('projectsMenuOpen', isOpen);
+						}, 10);
+					});
+				});
+			</script>
+
+	</body>
+</html>

@@ -1,0 +1,156 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Facebook Clone | Julius Holbert</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<meta name="description" content="Facebook Clone - A comprehensive social media application built with React, Node.js, and MySQL." />
+		<link rel="stylesheet" href="../assets/css/main.css" />
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+
+							<!-- Header -->
+								<header id="header">
+									<a href="../index.html" class="logo"><strong>Facebook Clone</strong> <img class="signaturelogo" src="../images/Logo.png" alt="Julius Holbert Logo"/> </a>
+									<ul class="icons">
+										<li><a href="https://www.linkedin.com/in/julius-holbert/" target="_blank" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
+										<li><a href="https://github.com/JuliusHolbert" target="_blank" class="icon brands fa-github"><span class="label">Github</span></a></li>
+									</ul>
+								</header>
+
+							<!-- Content -->
+								<section>
+									<header class="main">
+										<h1>Facebook Clone <a href="https://client-production-ab97.up.railway.app/login" target="_blank" class="icon solid fa-external-link-alt" style="font-size: 0.4em; margin-left: 0.3em; vertical-align: middle;"></a></h1>
+									</header>
+
+									<div class="project-iframe-container facebook-clone">
+										<iframe
+											src="https://client-production-ab97.up.railway.app/login"
+											title="Facebook Clone"
+											allowfullscreen
+											loading="lazy"
+											style="display: none;">
+										</iframe>
+										<div class="mobile-view-notice" style="display: block !important;">
+											<p><strong>The project is best experienced on the live site!</strong></p>
+											<a href="https://client-production-ab97.up.railway.app/login" target="_blank" class="button primary">View Full Project</a>
+										</div>
+									</div>
+
+									<p>This Facebook clone is a comprehensive social media application that enables users to connect, share content, and communicate in a familiar social networking environment. Users can create accounts, build their profiles with customizable profile and cover photos along with personal information (location, website, social media links), and discover other users through an intelligent suggestion system that recommends accounts to follow. The core social experience revolves around creating text and image-based posts that appear in a personalized feed, where users can interact through likes and comments, with all interactions tracked and displayed in real-time. The application features a relationship-based feed algorithm that displays posts from users you follow plus your own content, ensuring a curated timeline experience. Users can manage their profiles through an intuitive update modal, follow or unfollow other users with a single click, delete their own posts, and switch between dark and light themes for personalized viewing preferences. The interface includes familiar social media elements like a stories section, navigation sidebars with quick access to various features, friend activity feeds, and a top navigation bar providing access to the home feed, notifications, and profile management—all designed with a clean, fully mobile-responsive layout that adapts seamlessly across devices and mirrors the user experience of popular social platforms.</p>
+
+									<hr class="major" />
+
+									<h2>Technology Utilized</h2>
+									<div class="tech-tags" style="padding: 0; margin-bottom: 2em;">
+										<span class="tech-tag">React 18</span>
+										<span class="tech-tag">Node.js</span>
+										<span class="tech-tag">Express</span>
+										<span class="tech-tag">MySQL</span>
+										<span class="tech-tag">JWT</span>
+										<span class="tech-tag">React Query</span>
+										<span class="tech-tag">Material-UI</span>
+										<span class="tech-tag">Sass</span>
+										<span class="tech-tag">Multer</span>
+										<span class="tech-tag">bcrypt</span>
+									</div>
+									<p>This Facebook clone is a full-stack social media application built with React 18 on the frontend and Express.js with Node.js on the backend, utilizing MySQL as the relational database. The frontend leverages modern React patterns including hooks, React Router for navigation, Context API for global state management (authentication and theming), and TanStack React Query for efficient server state management and data caching, all styled with Material-UI (MUI) components and custom Sass styling. The backend API is structured as a RESTful service using Express with middleware for authentication, password hashing (bcrypt), file uploads (Multer), and CORS handling, executing raw SQL queries via the mysql2 library for direct database control without an ORM. User authentication is handled through JSON Web Tokens (JWT) stored in HTTP-only cookies, allowing users to remain authenticated across browser sessions—when a user logs in, the server generates a JWT containing their user information, sends it as a secure cookie to the client, and on subsequent requests, the token is validated to maintain the authenticated session without requiring repeated logins. The architecture is deployed as three separate Railway services: the React frontend, the Express backend API, and the MySQL database, with the database service featuring an attached persistent volume storage drive mounted to the backend for storing user-uploaded images including profile pictures, cover photos, and post images organized in dedicated folders.</p>
+
+									<hr class="major" />
+
+									<h2>Build Context</h2>
+									<p>This Facebook clone represents a comprehensive dive into full-stack social media architecture and the intricate challenges of building an interactive platform from scratch. The project pushed me to master complex relational database design, where I had to thoughtfully model the interconnected nature of social interactions such as managing relationships between users, posts, comments, likes, and follows through a well-structured MySQL schema with proper foreign key relationships and query optimization. Authentication became far more sophisticated than previous projects, as I implemented JWT-based session management with httpOnly cookies for security, and learned how authentication state doesn't just gate access but fundamentally shapes the entire user experience. Examples of Authentication State range from determining whose posts appear in the user's feed to controlling edit permissions and personalizing profile interactions. I tackled the challenge of building a dynamic feed algorithm that intelligently aggregates content from followed users while maintaining performance, which required learning and understanding SQL joins and query efficiency at a deeper level than I was previously familiar with. The file upload system was particularly educational, as I integrated Multer for handling multipart form data, and learned how to implement organized storage patterns for different image types (profiles, covers, posts). I previously had photo storage running locally. Images were stored in a folder on the frontend of my application, which worked great for testing, but when moving the application to the cloud, I initially ran into issues figuring out dynamic routing by the image type to different directories. I originally deployed this project with Amazon, utilizing AWS S3 for image storage, and Amazon RDS for the rest of the data, but due to the high cost of hosting, I reconfigured large parts of my application for deployment on Railway. On the frontend, I advanced my React skills significantly by implementing TanStack React Query for sophisticated server state management, which taught me about caching strategies, query invalidation patterns, and how to create smooth, responsive UIs that feel instant even when dealing with network latency. The theming system was my first time managing large styling changes in many components in the app, allowing the end user to choose between light mode (default) or switch to dark mode. This was done using SASS mixins and CSS custom properties that dynamically switches not just colors but also handles mobile viewport meta tags to prevent visual glitches during overscroll. Building the messenger component introduced me to the foundations of real-time communication systems and conversation threading, laying groundwork for future WebSocket integration. Perhaps most importantly, this project taught me how to architect applications where user actions cascade through multiple layers. A single "like" triggers database updates, query cache invalidations, UI re-renders, and affects what other users see. This required careful thoughts and planning about data flow and state synchronization.</p>
+
+								</section>
+
+						</div>
+					</div>
+
+				<!-- Sidebar -->
+					<div id="sidebar" class="inactive">
+						<div class="inner">
+
+							<!-- Menu -->
+								<nav id="menu">
+									<header class="major">
+										<h2>Menu</h2>
+									</header>
+									<ul>
+										<li><a href="../index.html">Homepage</a></li>
+										<li><a href="../about.html">About</a></li>
+										<li>
+											<span class="opener">Projects</span>
+											<ul>
+												<li><a href="Marco.html">Marco</a></li>
+												<li><a href="FacebookClone.html">Facebook Clone</a></li>
+												<li><a href="ChatGPT.html">ChatGPT Clone</a></li>
+												<li><a href="TravelMap.html">Travel Map</a></li>
+												<li><a href="IOSCardWar.html">iOS Card War</a></li>
+												<li><a href="BusTracker.html">Bus Tracker</a></li>
+											</ul>
+										</li>
+									</ul>
+								</nav>
+
+							<!-- Contact Info -->
+								<section>
+									<header class="major">
+										<h2>Contact</h2>
+									</header>
+									<p>The best way to get in touch with me is to send me an email. Please include the reason you're reaching out in the subject line.</p>
+									<ul class="contact">
+										<li class="icon solid fa-envelope"><a href="mailto:juliusholbert@gmail.com">juliusholbert@gmail.com</a></li>
+										<li class="icon solid fa-home">Largo, FL</li>
+									</ul>
+								</section>
+
+							<!-- Footer -->
+								<footer id="footer">
+									<p class="copyright">Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
+								</footer>
+
+						</div>
+					</div>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="../assets/js/jquery.min.js"></script>
+			<script src="../assets/js/browser.min.js"></script>
+			<script src="../assets/js/breakpoints.min.js"></script>
+			<script src="../assets/js/util.js"></script>
+			<script src="../assets/js/main.js"></script>
+			<script>
+				// Sidebar and menu state management
+				$(document).ready(function() {
+					if (sessionStorage.getItem('sidebarOpen') === 'true') {
+						$('#sidebar').removeClass('inactive');
+					}
+					if (sessionStorage.getItem('projectsMenuOpen') === 'true') {
+						$('#menu .opener').addClass('active');
+					}
+					$('#sidebar .toggle').on('click', function() {
+						setTimeout(function() {
+							var isOpen = !$('#sidebar').hasClass('inactive');
+							sessionStorage.setItem('sidebarOpen', isOpen);
+						}, 10);
+					});
+					$('#menu .opener').on('click', function() {
+						setTimeout(function() {
+							var isOpen = $('#menu .opener').hasClass('active');
+							sessionStorage.setItem('projectsMenuOpen', isOpen);
+						}, 10);
+					});
+				});
+			</script>
+
+	</body>
+</html>

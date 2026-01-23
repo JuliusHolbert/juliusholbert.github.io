@@ -1,0 +1,152 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>ChatGPT Clone | Julius Holbert</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<meta name="description" content="ChatGPT Clone - A full stack AI chat application integrating OpenAI's APIs with React and Node.js." />
+		<link rel="stylesheet" href="../assets/css/main.css" />
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+
+							<!-- Header -->
+								<header id="header">
+									<a href="../index.html" class="logo"><strong>ChatGPT Clone</strong> <img class="signaturelogo" src="../images/Logo.png" alt="Julius Holbert Logo"/> </a>
+									<ul class="icons">
+										<li><a href="https://www.linkedin.com/in/julius-holbert/" target="_blank" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
+										<li><a href="https://github.com/JuliusHolbert" target="_blank" class="icon brands fa-github"><span class="label">Github</span></a></li>
+									</ul>
+								</header>
+
+							<!-- Content -->
+								<section>
+									<header class="main">
+										<h1>ChatGPT Clone <a href="https://frontend-production-138d.up.railway.app/" target="_blank" class="icon solid fa-external-link-alt" style="font-size: 0.4em; margin-left: 0.3em; vertical-align: middle;"></a></h1>
+									</header>
+
+									<div class="project-iframe-container">
+										<iframe
+											src="https://frontend-production-138d.up.railway.app/"
+											title="ChatGPT Clone"
+											allowfullscreen
+											loading="lazy">
+										</iframe>
+										<div class="mobile-view-notice">
+											<p><strong>Mobile View</strong></p>
+											<p>This interactive project is best viewed on a desktop device.</p>
+											<a href="https://frontend-production-138d.up.railway.app/" target="_blank" class="button primary">View Full Project</a>
+										</div>
+									</div>
+
+									<p>JuliusGPT is a ChatGPT-inspired conversational AI application that provides users with an interactive chat interface powered by the Groq API's Llama 3.1 language model. The application features a clean, dual-panel layout with a sidebar for navigation and chat history management, and a main content area for active conversations. Users can initiate multiple chat sessions using the "New Chat" button, with each conversation automatically titled based on the first user message. The chat interface supports both click and keyboard interactions (Enter key) for sending messages, and implements auto-scrolling functionality to keep the latest messages visible as conversations progress. All chat history is preserved in the sidebar, allowing users to revisit previous conversations by clicking on their respective titles. The app displays both user inputs and AI-generated responses in a threaded message format, clearly distinguishing between roles (user vs. assistant). Messages are sent asynchronously to the backend server, which processes requests through the Groq API with a 100-token limit per response, ensuring quick and concise AI-generated replies. The application maintains conversation context by organizing messages under their respective chat titles, creating a seamless multi-conversation experience similar to mainstream AI chat platforms.</p>
+
+									<hr class="major" />
+
+									<h2>Technology Utilized</h2>
+									<div class="tech-tags" style="padding: 0; margin-bottom: 2em;">
+										<span class="tech-tag">React 18</span>
+										<span class="tech-tag">Node.js</span>
+										<span class="tech-tag">Express</span>
+										<span class="tech-tag">Groq API</span>
+										<span class="tech-tag">Llama 3.1</span>
+										<span class="tech-tag">React Hooks</span>
+									</div>
+									<p>This ChatGPT clone is built using a modern full-stack JavaScript architecture. The frontend is developed with React 18.2 and bootstrapped with Create React App, utilizing React Hooks (useState, useEffect, useRef) for state management and component lifecycle handling. The user interface provides a chat experience with conversation history, auto-scrolling message feeds, and keyboard event handling for message submission. The backend is powered by Node.js with Express.js as the web server framework. It uses CORS middleware to enable cross-origin requests from the frontend, dotenv for secure environment variable management, and integrates with the Groq API (using the llama-3.1-8b-instant model) to generate AI-powered chat responses. The backend acts as a proxy server, securely managing API authentication and forwarding user messages to Groq's OpenAI-compatible endpoint before returning the AI-generated responses to the client. The application employs Nodemon in development for automatic server restarts, and follows a clean separation of concerns with the frontend making fetch requests to the backend API rather than directly accessing the AI service.</p>
+
+									<hr class="major" />
+
+									<h2>Build Context</h2>
+									<p>I built this application in order to learn about the process of integrating an AI language model into an application. OpenAI's API integration was much simpler than I thought and it was fun learning about how such a meaningful technology can be implemented. I didn't spend a lot of time on this application since a lot of that is topics I'm already well versed in, but if I did, I would implement user authentication, persistent storage of chats, and UI changes.</p>
+
+								</section>
+
+						</div>
+					</div>
+
+				<!-- Sidebar -->
+					<div id="sidebar" class="inactive">
+						<div class="inner">
+
+							<!-- Menu -->
+								<nav id="menu">
+									<header class="major">
+										<h2>Menu</h2>
+									</header>
+									<ul>
+										<li><a href="../index.html">Homepage</a></li>
+										<li><a href="../about.html">About</a></li>
+										<li>
+											<span class="opener">Projects</span>
+											<ul>
+												<li><a href="Marco.html">Marco</a></li>
+												<li><a href="FacebookClone.html">Facebook Clone</a></li>
+												<li><a href="ChatGPT.html">ChatGPT Clone</a></li>
+												<li><a href="TravelMap.html">Travel Map</a></li>
+												<li><a href="IOSCardWar.html">iOS Card War</a></li>
+												<li><a href="BusTracker.html">Bus Tracker</a></li>
+											</ul>
+										</li>
+									</ul>
+								</nav>
+
+							<!-- Contact Info -->
+								<section>
+									<header class="major">
+										<h2>Contact</h2>
+									</header>
+									<p>The best way to get in touch with me is to send me an email. Please include the reason you're reaching out in the subject line.</p>
+									<ul class="contact">
+										<li class="icon solid fa-envelope"><a href="mailto:juliusholbert@gmail.com">juliusholbert@gmail.com</a></li>
+										<li class="icon solid fa-home">Largo, FL</li>
+									</ul>
+								</section>
+
+							<!-- Footer -->
+								<footer id="footer">
+									<p class="copyright">Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
+								</footer>
+
+						</div>
+					</div>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="../assets/js/jquery.min.js"></script>
+			<script src="../assets/js/browser.min.js"></script>
+			<script src="../assets/js/breakpoints.min.js"></script>
+			<script src="../assets/js/util.js"></script>
+			<script src="../assets/js/main.js"></script>
+			<script>
+				// Sidebar and menu state management
+				$(document).ready(function() {
+					if (sessionStorage.getItem('sidebarOpen') === 'true') {
+						$('#sidebar').removeClass('inactive');
+					}
+					if (sessionStorage.getItem('projectsMenuOpen') === 'true') {
+						$('#menu .opener').addClass('active');
+					}
+					$('#sidebar .toggle').on('click', function() {
+						setTimeout(function() {
+							var isOpen = !$('#sidebar').hasClass('inactive');
+							sessionStorage.setItem('sidebarOpen', isOpen);
+						}, 10);
+					});
+					$('#menu .opener').on('click', function() {
+						setTimeout(function() {
+							var isOpen = $('#menu .opener').hasClass('active');
+							sessionStorage.setItem('projectsMenuOpen', isOpen);
+						}, 10);
+					});
+				});
+			</script>
+
+	</body>
+</html>

@@ -1,0 +1,153 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Bus Tracker | Julius Holbert</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<meta name="description" content="Bus Tracker - A real-time bus tracking application using Mapbox and the MBTA API." />
+		<link rel="stylesheet" href="../assets/css/main.css" />
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+
+							<!-- Header -->
+								<header id="header">
+									<a href="../index.html" class="logo"><strong>Bus Tracker</strong> <img class="signaturelogo" src="../images/Logo.png" alt="Julius Holbert Logo"/> </a>
+									<ul class="icons">
+										<li><a href="https://www.linkedin.com/in/julius-holbert/" target="_blank" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
+										<li><a href="https://github.com/JuliusHolbert" target="_blank" class="icon brands fa-github"><span class="label">Github</span></a></li>
+									</ul>
+								</header>
+
+							<!-- Content -->
+								<section>
+									<header class="main">
+										<h1>Bus Tracker <a href="https://juliusholbert.github.io/Real-Time-Bus-Tracker/" target="_blank" class="icon solid fa-external-link-alt" style="font-size: 0.4em; margin-left: 0.3em; vertical-align: middle;"></a></h1>
+									</header>
+
+									<div class="project-iframe-container">
+										<iframe
+											src="https://juliusholbert.github.io/Real-Time-Bus-Tracker/"
+											title="Bus Tracker"
+											allowfullscreen
+											loading="lazy">
+										</iframe>
+										<div class="mobile-view-notice">
+											<p><strong>Mobile View</strong></p>
+											<p>This interactive project is best viewed on a desktop device.</p>
+											<a href="https://juliusholbert.github.io/Real-Time-Bus-Tracker/" target="_blank" class="button primary">View Full Project</a>
+										</div>
+									</div>
+
+									<p>The application uses publicly available data from Massachusetts Bay Transportation Authority; the largest transit system in Massachusetts. The bus icons on the map represent the real time locations and occupancies of the buses the authority runs in Boston, and the Icons and occupancy update every three seconds, the fastest possible update time to conform with the 20 requests per minute on a free plan. There is a map key in the bottom right corner that shows what the color of the icons represent, and if there are no bus icons on the map, a message will pop up saying that currently there are no busses running. This project is mobile responsive and looks great on screens of all sizes.</p>
+
+									<hr class="major" />
+
+									<h2>Technology Utilized</h2>
+									<div class="tech-tags" style="padding: 0; margin-bottom: 2em;">
+										<span class="tech-tag">JavaScript ES6+</span>
+										<span class="tech-tag">Mapbox GL JS</span>
+										<span class="tech-tag">MBTA API</span>
+										<span class="tech-tag">HTML5</span>
+										<span class="tech-tag">CSS3</span>
+										<span class="tech-tag">SVG</span>
+										<span class="tech-tag">Flexbox</span>
+									</div>
+									<p>This real-time bus tracker application is built using a modern web technology stack featuring Mapbox GL JS v1.11.0 as the core mapping library for rendering interactive maps and managing custom SVG bus markers. The frontend is developed with vanilla JavaScript (ES6+) utilizing modern features like async/await for asynchronous API calls, arrow functions, and template literals. The application consumes real-time transit data from the MBTA (Massachusetts Bay Transportation Authority) V3 REST API, which provides live vehicle locations, occupancy status, and trip information for Boston's Route 1 buses. The user interface is styled with custom CSS3, implementing Flexbox layouts, CSS transforms, and box shadows to create a clean, responsive design with an occupancy legend overlay and a dynamic disclaimer system. The map visualization uses SVG (Scalable Vector Graphics) for the bus icons, with dynamically colored markers based on real-time crowding levels. The application follows a client-side architecture with HTML5 as the markup foundation, and employs DOM manipulation for dynamic content updates without requiring any frameworks or build tools, making it a lightweight, dependency-free solution that runs entirely in the browser.</p>
+
+									<hr class="major" />
+
+									<h2>Build Context</h2>
+									<p>This app was one of the first projects I made to learn how to integrate third party APIs into a web apps. At the time of building this, I was new to reading API documentation, and I had to learn what constraints and limitations I was confined by, as well as what different methods I could use to fetch information. I was really interested in utilizing mapping technology at the time, as I believed as I do now years later, that it is an underutilized resource that helps connect end users with points of interest, or information that they can relate to themselves.</p>
+
+								</section>
+
+						</div>
+					</div>
+
+				<!-- Sidebar -->
+					<div id="sidebar" class="inactive">
+						<div class="inner">
+
+							<!-- Menu -->
+								<nav id="menu">
+									<header class="major">
+										<h2>Menu</h2>
+									</header>
+									<ul>
+										<li><a href="../index.html">Homepage</a></li>
+										<li><a href="../about.html">About</a></li>
+										<li>
+											<span class="opener">Projects</span>
+											<ul>
+												<li><a href="Marco.html">Marco</a></li>
+												<li><a href="FacebookClone.html">Facebook Clone</a></li>
+												<li><a href="ChatGPT.html">ChatGPT Clone</a></li>
+												<li><a href="TravelMap.html">Travel Map</a></li>
+												<li><a href="IOSCardWar.html">iOS Card War</a></li>
+												<li><a href="BusTracker.html">Bus Tracker</a></li>
+											</ul>
+										</li>
+									</ul>
+								</nav>
+
+							<!-- Contact Info -->
+								<section>
+									<header class="major">
+										<h2>Contact</h2>
+									</header>
+									<p>The best way to get in touch with me is to send me an email. Please include the reason you're reaching out in the subject line.</p>
+									<ul class="contact">
+										<li class="icon solid fa-envelope"><a href="mailto:juliusholbert@gmail.com">juliusholbert@gmail.com</a></li>
+										<li class="icon solid fa-home">Largo, FL</li>
+									</ul>
+								</section>
+
+							<!-- Footer -->
+								<footer id="footer">
+									<p class="copyright">Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
+								</footer>
+
+						</div>
+					</div>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="../assets/js/jquery.min.js"></script>
+			<script src="../assets/js/browser.min.js"></script>
+			<script src="../assets/js/breakpoints.min.js"></script>
+			<script src="../assets/js/util.js"></script>
+			<script src="../assets/js/main.js"></script>
+			<script>
+				// Sidebar and menu state management
+				$(document).ready(function() {
+					if (sessionStorage.getItem('sidebarOpen') === 'true') {
+						$('#sidebar').removeClass('inactive');
+					}
+					if (sessionStorage.getItem('projectsMenuOpen') === 'true') {
+						$('#menu .opener').addClass('active');
+					}
+					$('#sidebar .toggle').on('click', function() {
+						setTimeout(function() {
+							var isOpen = !$('#sidebar').hasClass('inactive');
+							sessionStorage.setItem('sidebarOpen', isOpen);
+						}, 10);
+					});
+					$('#menu .opener').on('click', function() {
+						setTimeout(function() {
+							var isOpen = $('#menu .opener').hasClass('active');
+							sessionStorage.setItem('projectsMenuOpen', isOpen);
+						}, 10);
+					});
+				});
+			</script>
+
+	</body>
+</html>
