@@ -2213,7 +2213,7 @@ button.disabled, button:disabled,
   /* When forced to display on desktop (like FacebookClone), make it more square */
   .mobile-view-notice[style*="display: block"] {
     max-width: 400px;
-    margin: 0 auto;
+    margin: 0;
     padding: 2.5em 2em;
   }
 }
