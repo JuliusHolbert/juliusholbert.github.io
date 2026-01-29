@@ -45,30 +45,42 @@
 										</div>
 									</div>
 
-									<p>JuliusGPT is a ChatGPT-inspired conversational AI application that provides users with an interactive chat interface powered by the Groq API's Llama 3.1 language model. The application features a clean, dual-panel layout with a sidebar for navigation and chat history management, and a main content area for active conversations. Users can initiate multiple chat sessions using the "New Chat" button, with each conversation automatically titled based on the first user message. The chat interface supports both click and keyboard interactions (Enter key) for sending messages, and implements auto-scrolling functionality to keep the latest messages visible as conversations progress. All chat history is preserved in the sidebar, allowing users to revisit previous conversations by clicking on their respective titles. The app displays both user inputs and AI-generated responses in a threaded message format, clearly distinguishing between roles (user vs. assistant). Messages are sent asynchronously to the backend server, which processes requests through the Groq API with a 100-token limit per response, ensuring quick and concise AI-generated replies. The application maintains conversation context by organizing messages under their respective chat titles, creating a seamless multi-conversation experience similar to mainstream AI chat platforms.</p>
+									<p>JuliusGPT is a ChatGPT style conversational AI application that delivers an interactive, real-time chat experience powered by on demand GPU infrastructure running the Llama 3.1 8B language model via Ollama. The application features a responsive React-based interface with a familiar chat layout, streaming AI responses, and clear visual feedback during GPU cold starts(This can take a couple of minutes). Rather than relying on always-on compute, JuliusGPT dynamically provisions GPU pods only when needed, transparently displaying startup progress, model loading, and usage statistics to the user. Messages are streamed token by token using Server Sent Events (SSE), providing a smooth, low-latency conversational experience once the model is live. The backend manages GPU lifecycle, cost controls, and automatic shutdown after inactivity, ensuring efficient resource usage while maintaining a polished, ChatGPT like user experience.</p>
 
 									<hr class="major" />
 
 									<h2>Technology Utilized</h2>
 									<div class="tech-tags" style="padding: 0; margin-bottom: 2em;">
-										<span class="tech-tag">React 18</span>
+                    <span class="tech-tag">GPU Cloud Computing</span>
+                    <span class="tech-tag">Self Hosted LLM Inference</span>
+                    <span class="tech-tag">Server-Sent Events (SSE)</span>
+                    <span class="tech-tag">Dynamic Cloud Provisioning</span>
+                    <span class="tech-tag">RunPod</span>
+                    <span class="tech-tag">Llama 3.1 8B</span>
+                    <span class="tech-tag">Docker</span>
+                    <span class="tech-tag">React 18</span>
+                    <span class="tech-tag">React Hooks</span>
 										<span class="tech-tag">Node.js</span>
 										<span class="tech-tag">Express</span>
-										<span class="tech-tag">Groq API</span>
-										<span class="tech-tag">Llama 3.1</span>
-										<span class="tech-tag">React Hooks</span>
+										
 									</div>
-									<p>This ChatGPT clone is built using a modern full-stack JavaScript architecture. The frontend is developed with React 18.2 and bootstrapped with Create React App, utilizing React Hooks (useState, useEffect, useRef) for state management and component lifecycle handling. The user interface provides a chat experience with conversation history, auto-scrolling message feeds, and keyboard event handling for message submission. The backend is powered by Node.js with Express.js as the web server framework. It uses CORS middleware to enable cross-origin requests from the frontend, dotenv for secure environment variable management, and integrates with the Groq API (using the llama-3.1-8b-instant model) to generate AI-powered chat responses. The backend acts as a proxy server, securely managing API authentication and forwarding user messages to Groq's OpenAI-compatible endpoint before returning the AI-generated responses to the client. The application employs Nodemon in development for automatic server restarts, and follows a clean separation of concerns with the frontend making fetch requests to the backend API rather than directly accessing the AI service.</p>
+                  <p>This ChatGPT style application is built using a modern full stack architecture with an emphasis on real time streaming, and dynamic infrastructure management. The frontend is developed with React 18 and leverages React Hooks to manage application state, streaming message updates, and UI transitions during GPU cold starts/shutdown events. The user interface provides a responsive chat experience with streamed, token-by-token AI responses, visual cold start feedback, and automatic scrolling to keep the latest messages in view. The backend is powered by Node.js and Express.js and serves as both an API layer and an orchestration layer for on demand GPU resources. It uses Server-Sent-Events(SSE) to stream pod lifecycle status, model loading progress, and inference tokens to the client in real time. Instead of relying on a hosted inference API(original version of this project), the backend dynamically provisions GPU pods on RunPod, running the Llama 3.1 8B model locally via Ollama inside a Docker container. During pod creation, the system attempts to provision GPUs in a prioritized fallback order including RTX 3090, RTX 4090, RTX A5000, and RTX A4000, while preferring US based availability to reduce latency. The server manages pod lifecycle state, concurrency control, cost validation, and automatic shutdown after inactivity to optimize resource usage. Environment variables are securely managed using dotenv, CORS is configured for frontend communication, and the system follows a clean separation of concerns, with the frontend interacting exclusively with the backend while all model execution and infrastructure logic remains server-side.</p>
 
 									<hr class="major" />
 
 									<h2>Build Context</h2>
-									<p>I built this application in order to learn about the process of integrating an AI language model into an application. OpenAI's API integration was much simpler than I thought and it was fun learning about how such a meaningful technology can be implemented. I didn't spend a lot of time on this application since a lot of that is topics I'm already well versed in, but if I did, I would implement user authentication, persistent storage of chats, and UI changes.</p>
+                  <p>So this project was originally relatively simplistic, and was a ChatGPT clone I built, and hosted on Railway to learn about integrating OpenAI's APIs into applications. At the time, I used OpenAI's API, but I switched to Groq because of the company's generous free tier. After thinking the project was too simplistic, and wanting to do a better job of showcasing my skills, I converted the original project to what is currently displayed. I wanted something that provisions and utilizes specified cloud based GPU's, and that downloads, runs and manages an LLM locally on the provisioned machine in the cloud. I had to take into consideration which GPU's were powerful enough to run the model of my choice, which LLM provided the best trade-offs, and what level of model quantization was feasible. I had to take into consideration cost, think about availability of different machines at different times, and think about the location of the GPUs being utilized. The project was incredibly difficult and I utilized Claude Code to help with working on many of the backend aspects of the application, but primarily podManager.js(Manages the full lifecycle of the GPU) and the server.js. This was the hardest part of the application since in this instance, Railway's reverse proxy buffers HTTP responses for POST requests. To get around this, I split the request submission and response streaming into a POST request for initiating the operation, and a long lived GET request using Server-Sent Events (SSE) to stream real time status updates and model output. I didn't spend time implementing authentication, or persistent chat storage in this application since those are topics I'm pretty well versed in, but it is something I would do for a shippable product</p>
 
                   <hr class="major" />
 
-                  <h2>Current Work</h2>
-									<p>I am transitioning this project away from using Groq, and instead want to spin-up a cloud based GPU (RTX 3090(24GB)) on Runpod. While Groq has a generous free tier, I would like something that showcases a little more thought, and analysis. The implementation I am working on would run a quantized model of Llama 3 in the cloud and select a GPU based on hourly cost, and what is available. The pod would spin up when the user submits a prompt, displaying a UI message that walks the user through what is happening behind the scenes, and then will shut down the pod after a period of inactivity. I figure this will be a good way to demonstrate a solid foundation of working with cloud based GPU providers, and showcase the analysis and expertise I have with choosing different models/cards under different use case scenarios</p>
+                  <h1>
+                  ChatGPT Clone
+                  <a href="https://frontend-production-138d.up.railway.app/"
+                    target="_blank"
+                    class="icon solid">
+                    <i class="fas fa-external-link-alt"></i>
+                  </a>
+                </h1>
 
 								</section>
 
