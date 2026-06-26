@@ -2195,6 +2195,13 @@ button.disabled, button:disabled,
   box-sizing: border-box;
 }
 
+.mobile-view-notice img {
+  max-width: 100%;
+  border-radius: var(--radius-md);
+  margin-bottom: 1.25em;
+  border: 1px solid var(--border-color);
+}
+
 /* Hide iframes on mobile devices */
 @media screen and (max-width: 736px) {
   .project-iframe-container iframe {
@@ -2208,13 +2215,6 @@ button.disabled, button:disabled,
 @media screen and (min-width: 737px) {
   .mobile-view-notice {
     display: none;
-  }
-
-  /* When forced to display on desktop (like FacebookClone), make it more square */
-  .mobile-view-notice[style*="display: block"] {
-    max-width: 400px;
-    margin: 0;
-    padding: 2.5em 2em;
   }
 }
 
